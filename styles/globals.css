@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Libre-Caslon-Regular, Roboto, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -13,4 +12,27 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* Font Family */
+@font-face {
+  font-family: "Libre-Caslon-Regular";
+  src: url(/fonts/LibreCaslonText-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Libre-Caslon-Italic";
+  src: url(/fonts/LibreCaslonText-Italic.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Libre-Caslon-Bold";
+  src: url(/fonts/LibreCaslonText-Bold.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
