@@ -4,7 +4,7 @@
   font-size: 28px;
 }
 .navHeader {
-  background: #14213D;
+  background: #14213d;
   max-height: 65px;
   color: #fff;
   display: flex;
@@ -19,7 +19,7 @@
 .navLink {
   margin-right: 35px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   align-items: center;
   display: flex;
 }
@@ -28,7 +28,7 @@
 }
 .headerImg {
   min-height: 75vh;
-  max-height: 98vh;
+  max-height: 90vh;
   position: absolute;
 }
 .header {
@@ -38,10 +38,23 @@
   padding: 0 16px;
 }
 .header h1 {
-  font-family: Libre-Caslon-Bold;
+  font-family: Barlow-Bold;
   margin-bottom: 24px;
   font-size: 44px;
 }
 .header q {
-  font-family: Libre-Caslon-Italic;
+  font-family: Barlow-Italic;
+}
+
+.browseRoot h1 {
+  font-family: Barlow-Bold;
+}
+.browseTiles {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.browseTiles img {
+  width: 400px;
+  height: 300px;
 }

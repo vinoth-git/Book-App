@@ -1,26 +1,36 @@
 .root ul {
   justify-content: center;
-  margin: 20px 0 50px;
+  margin: 50px 0;
+}
+.root {
+  text-align: center;
 }
 .searchInput {
   color: #fff;
 }
 .tileImg {
   height: 200px;
-  width: 140px;
+  width: 140px !important;
+}
+.formRoot {
+  width: 100%;
+  max-width: 500px;
+  margin: 40px 0 30px 0;
 }
 .tileRoot {
   display: flex;
-  padding: 24px 16px;
+  text-align: initial;
   max-width: 1000px;
-  margin: 10px auto;
-  border-bottom: 1px solid #3d5a80;
+  border-radius: 12px;
+  margin: 50px auto;
+  background: #f5f4f4;
+  box-shadow: #14213d 0px 20px 30px -10px;
 }
 .tileContent {
-  margin-left: 20px;
+  padding: 20px;
 }
 .tileContent span {
-  font-family: Libre-Caslon-Italic;
+  font-family: Barlow-Italic;
 }
 .tileContent p {
   margin: 10px 0;
@@ -33,6 +43,28 @@
 .tileContent p:first-child {
   display: flex;
   font-size: 22px;
-  font-family: Libre-Caslon-Bold;
+  font-family: Barlow-Bold;
   margin: 0 8px 0 0 !important;
+}
+
+@media only screen and (max-width: 1000px) {
+  .tileRoot {
+    margin: 50px 16px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .tileRoot {
+    display: block;
+  }
+  .tileImg {
+    height: 150px;
+    width: 100px !important;
+    margin: 0 auto 20px auto;
+  }
+  .formRoot {
+    padding: 0px 16px;
+  }
+  .formRoot label {
+    padding: 0 16px;
+  }
 }

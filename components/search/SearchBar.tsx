@@ -28,7 +28,11 @@ function SearchBar(props: Props) {
   }
 
   return (
-    <FormControl sx={{ m: 1, width: "25ch" }} variant="standard">
+    <FormControl
+      classes={{ root: styles.formRoot }}
+      sx={{ m: 1, width: "25ch" }}
+      variant="standard"
+    >
       <InputLabel htmlFor="filled-adornment-amount">
         Search a Books...
       </InputLabel>
@@ -36,8 +40,12 @@ function SearchBar(props: Props) {
         type={"text"}
         value={value}
         onChange={handleChange}
-        onKeyDown={handleClick}
-        onBlur={handleClick}
+        onKeyDown={(e: any) => {
+          if (e.code === "Enter") {
+            handleClick();
+          }
+        }}
+        // onBlur={handleClick}
         // classes={{ root: styles.searchInput }}
         endAdornment={
           <InputAdornment position="end">

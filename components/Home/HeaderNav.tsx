@@ -3,7 +3,6 @@ import React from "react";
 import styles from "../../styles/home.module.css";
 import {
   HomeOutlined,
-  LibraryBooksOutlined,
   SearchOutlined,
   ConnectWithoutContactOutlined,
   MenuOutlined,
@@ -24,18 +23,13 @@ function HeaderNav(props: Props) {
       NavIcon: HomeOutlined,
     },
     {
-      name: "Browse",
-      href: "/browse",
-      NavIcon: LibraryBooksOutlined,
-    },
-    {
       name: "Search",
       href: "/search?query=marvel",
       NavIcon: SearchOutlined,
     },
     {
-      name: "Contact Us",
-      href: "/contact",
+      name: "About Us",
+      href: "/about",
       NavIcon: ConnectWithoutContactOutlined,
     },
   ];
@@ -45,11 +39,10 @@ function HeaderNav(props: Props) {
   };
   const handleClose = () => {
     setAnchorEl(null);
-    router.push();
   };
   return (
     <div className={styles.navHeader}>
-      <Link href="/">
+      <Link href="/home">
         <a className={styles.logo}>Book App</a>
       </Link>
       <Hidden mdDown>

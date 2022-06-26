@@ -27,23 +27,22 @@ function Search(props: Props) {
   }, [dispatch, val]);
 
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-    console.log(value * 40, "hiug");
     dispatch(fetchBooks({ query: queryValue, startIndex: value * 40 }));
+    window.scrollTo(0, 0);
   };
 
   return (
     <div className={styles.root}>
       <SearchBar setValue={setValue} value={queryValue} />
-      {bookList &&
-        bookList.items &&
-        bookList.items.length > 0 &&
-        bookList.items.map((c: any) => <BookTile key={c.id} data={c} />)}
+      {bookList && bookList.items && bookList.items.length > 0 ? (
+        bookList.items.map((c: any) => <BookTile key={c.id} data={c} />)
+      ) : (
+        <h1 style={{ fontFamily: " Barlow-Regular", textAlign: "center" }}>
+          No books available. please use different terms!..
+        </h1>
+      )}
       {bookList && bookList.totalItems && bookList.totalItems > 40 && (
-        <Pagination
-          count={Math.round(bookList.totalItems / 40)}
-          color="primary"
-          onChange={handleChange}
-        />
+        <Pagination count={10} color="primary" onChange={handleChange} />
       )}
     </div>
   );

@@ -4,14 +4,24 @@ import { wrapper } from "../redux/store";
 import Layout from "../components/Layout";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "../styles/Theme";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={theme}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ThemeProvider>
+    <>
+      <Head>
+        <title>Book APP - About</title>
+        <meta
+          name="description"
+          content="Book APP"
+        />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+    </>
   );
 }
 

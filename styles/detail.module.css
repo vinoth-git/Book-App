@@ -1,0 +1,10 @@
+.root h1 {
+  font-family: Barlow-Regular;
+  margin: 10px 0;
+  font-weight: 100;
+  text-align: center;
+}
+.root img {
+  height: 250px;
+  width: 150px;
+}

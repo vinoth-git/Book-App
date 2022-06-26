@@ -11,10 +11,7 @@ export const fetchBooks: any = createAsyncThunk(
       if (startIndex) {
         Url += `&startIndex=${startIndex}`;
       }
-      let { data: books } = await axios.get(
-        // "https://www.googleapis.com/books/v1/volumes/qdTgpEwSiIQC?key=AIzaSyCjvI1Fpf6lfmOZhg7GRfZ7Ju8ULjPw-dE"
-        Url
-      );
+      let { data: books } = await axios.get(Url);
       dispatch(storeBookList(books));
     } catch (error) {}
   }
@@ -25,10 +22,10 @@ export const fetchBookById: any = createAsyncThunk(
   async (data: any, { dispatch }) => {
     try {
       let { id } = data;
-      let { data: books } = await axios.get(
-        `https://www.googleapis.com/books/v1/volumes/${id}?key=AIzaSyCjvI1Fpf6lfmOZhg7GRfZ7Ju8ULjPw-dE`
+      let { data: book } = await axios.get(
+        `https://www.googleapis.com/books/v1/volumes/${id}?key=AIzaSyCjvI1Fpf6lfmOZhg7GRfZ7Ju8ULjPw-dE&printType=books`
       );
-      dispatch(storeBookList(books));
+      dispatch(storeBookDetail(book));
     } catch (error) {}
   }
 );
@@ -37,15 +34,19 @@ export const Home = createSlice({
   name: "homeReducer",
   initialState: {
     bookList: {},
+    bookDetail: {},
   },
   reducers: {
     storeBookList: (state, action) => {
       state.bookList = action.payload;
     },
+    storeBookDetail: (state, action) => {
+      state.bookDetail = action.payload;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { storeBookList } = Home.actions;
+export const { storeBookList, storeBookDetail } = Home.actions;
 
 export default Home.reducer;

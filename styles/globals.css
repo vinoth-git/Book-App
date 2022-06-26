@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Libre-Caslon-Regular, Roboto, Helvetica Neue, sans-serif;
-  background: #E5E5E5;
+  font-family: Barlow-Regular, Roboto, Helvetica Neue, sans-serif;
 }
 
 h1,
@@ -22,22 +21,22 @@ a {
 
 /* Font Family */
 @font-face {
-  font-family: "Libre-Caslon-Regular";
-  src: url(/fonts/LibreCaslonText-Regular.ttf) format("truetype");
+  font-family: "Barlow-Regular";
+  src: url(/fonts/Barlow-Regular.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Libre-Caslon-Italic";
-  src: url(/fonts/LibreCaslonText-Italic.ttf) format("truetype");
+  font-family: "Barlow-Italic";
+  src: url(/fonts/Barlow-Italic.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Libre-Caslon-Bold";
-  src: url(/fonts/LibreCaslonText-Bold.ttf) format("truetype");
+  font-family: "Barlow-Bold";
+  src: url(/fonts/Barlow-Bold.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
