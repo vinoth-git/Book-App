@@ -1,0 +1,38 @@
+.root ul {
+  justify-content: center;
+  margin: 20px 0 50px;
+}
+.searchInput {
+  color: #fff;
+}
+.tileImg {
+  height: 200px;
+  width: 140px;
+}
+.tileRoot {
+  display: flex;
+  padding: 24px 16px;
+  max-width: 1000px;
+  margin: 10px auto;
+  border-bottom: 1px solid #3d5a80;
+}
+.tileContent {
+  margin-left: 20px;
+}
+.tileContent span {
+  font-family: Libre-Caslon-Italic;
+}
+.tileContent p {
+  margin: 10px 0;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+.tileContent svg {
+  margin-left: 5px;
+}
+.tileContent p:first-child {
+  display: flex;
+  font-size: 22px;
+  font-family: Libre-Caslon-Bold;
+  margin: 0 8px 0 0 !important;
+}

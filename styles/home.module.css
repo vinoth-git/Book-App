@@ -1,0 +1,47 @@
+.logo {
+  font-family: Niconne-Regular;
+  margin: 0;
+  font-size: 28px;
+}
+.navHeader {
+  background: #14213D;
+  max-height: 65px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 24px;
+  z-index: 99999;
+}
+.navHeader div {
+  display: flex;
+}
+.navLink {
+  margin-right: 35px;
+  cursor: pointer;
+  font-size: 14px;
+  align-items: center;
+  display: flex;
+}
+.navLink svg {
+  margin-right: 5px;
+}
+.headerImg {
+  min-height: 75vh;
+  max-height: 98vh;
+  position: absolute;
+}
+.header {
+  position: relative;
+  text-align: center;
+  top: 20vh;
+  padding: 0 16px;
+}
+.header h1 {
+  font-family: Libre-Caslon-Bold;
+  margin-bottom: 24px;
+  font-size: 44px;
+}
+.header q {
+  font-family: Libre-Caslon-Italic;
+}
