@@ -37,12 +37,20 @@ function Search(props: Props) {
       {bookList && bookList.items && bookList.items.length > 0 ? (
         bookList.items.map((c: any) => <BookTile key={c.id} data={c} />)
       ) : (
-        <h1 style={{ fontFamily: " Barlow-Regular", textAlign: "center" }}>
+        <h1
+          style={{
+            fontFamily: " Barlow-Regular",
+            textAlign: "center",
+            height: "50vh",
+          }}
+        >
           No books available. please use different terms!..
         </h1>
       )}
-      {bookList && bookList.totalItems && bookList.totalItems > 40 && (
+      {bookList && bookList.totalItems && bookList.totalItems > 40 ? (
         <Pagination count={10} color="primary" onChange={handleChange} />
+      ) : (
+        ""
       )}
     </div>
   );

@@ -11,6 +11,7 @@ import Link from "next/link";
 interface Props {}
 
 export default function Browse(props: Props) {
+  //Mock data
   let data = [
     {
       title: "Fiction",
@@ -40,19 +41,19 @@ export default function Browse(props: Props) {
   ];
 
   return (
-    <div className={styles.browseRoot}>
+    <div id="Browse" className={styles.browseRoot}>
       <h1>Browse books by genres</h1>
       <div className={styles.browseTiles}>
         {data.map((c) => (
-          <Link key={c.src} href="">
+          <Link key={c.src} href={`/search?query=${c.title}`}>
             <a>
               <CardMedia
                 component={"img"}
                 src={c.src}
                 alt={"Browse Thumbnail"}
               />
-              <p>{c.title}</p>
-              <p>{c.subTitle}</p>
+              <p style={{ fontFamily: "Barlow-Bold" }}>{c.title}</p>
+              <p style={{ fontFamily: "Barlow-Italic" }}>{c.subTitle}</p>
             </a>
           </Link>
         ))}

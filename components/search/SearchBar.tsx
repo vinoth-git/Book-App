@@ -45,8 +45,6 @@ function SearchBar(props: Props) {
             handleClick();
           }
         }}
-        // onBlur={handleClick}
-        // classes={{ root: styles.searchInput }}
         endAdornment={
           <InputAdornment position="end">
             <IconButton

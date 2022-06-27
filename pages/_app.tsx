@@ -10,10 +10,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Book APP - About</title>
+        <title>Book APP</title>
         <meta
           name="description"
-          content="Book APP"
+          content="Book APP for Readers"
         />
       </Head>
       <ThemeProvider theme={theme}>

@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <div style={{ minHeight: "78vh" }}>
+      <div className={styles.homePage}>
         <CardMedia
           component={"img"}
           src={HeaderImg.src}

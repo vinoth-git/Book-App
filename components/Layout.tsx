@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import Footer from "./Footer";
 import HeaderNav from "./Home/HeaderNav";
 
 interface Props {
@@ -10,6 +11,7 @@ function Layout(props: Props) {
     <div>
       <HeaderNav />
       {props.children}
+      <Footer />
     </div>
   );
 }

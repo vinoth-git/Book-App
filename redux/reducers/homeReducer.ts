@@ -2,6 +2,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
+// Fetch all the books
 export const fetchBooks: any = createAsyncThunk(
   "homeReducer/fetchBooks",
   async (data: any, { dispatch }) => {
@@ -17,36 +18,19 @@ export const fetchBooks: any = createAsyncThunk(
   }
 );
 
-export const fetchBookById: any = createAsyncThunk(
-  "homeReducer/fetchBooks",
-  async (data: any, { dispatch }) => {
-    try {
-      let { id } = data;
-      let { data: book } = await axios.get(
-        `https://www.googleapis.com/books/v1/volumes/${id}?key=AIzaSyCjvI1Fpf6lfmOZhg7GRfZ7Ju8ULjPw-dE&printType=books`
-      );
-      dispatch(storeBookDetail(book));
-    } catch (error) {}
-  }
-);
-
 export const Home = createSlice({
   name: "homeReducer",
   initialState: {
     bookList: {},
-    bookDetail: {},
   },
   reducers: {
     storeBookList: (state, action) => {
       state.bookList = action.payload;
     },
-    storeBookDetail: (state, action) => {
-      state.bookDetail = action.payload;
-    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { storeBookList, storeBookDetail } = Home.actions;
+export const { storeBookList } = Home.actions;
 
 export default Home.reducer;

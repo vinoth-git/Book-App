@@ -1,6 +1,30 @@
+.headerImg {
+  width: 100vw;
+  max-height: 60vh;
+}
 .header {
-  font-family: Barlow-Italic;
+  font-family: Barlow-Bold;
   text-align: center;
-  margin: 10px 0;
+  margin: 20px 0;
   font-size: 20px;
+}
+.para {
+  padding: 0 16px;
+  max-width: 500px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin: 0 auto 30px;
+  text-align: justify;
+}
+.address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.address address {
+  margin: 0 15px;
+}
+.link {
+  margin: 40px 0;
+  text-align: center;
 }
