@@ -9,7 +9,6 @@ interface Props {
 function Book(props: Props) {
   let { data } = props;
   let book = data && data.volumeInfo;
-  console.log(data);
   return (
     <div className={styles.root}>
       <h1>{(book && book.title) || ""}</h1>
