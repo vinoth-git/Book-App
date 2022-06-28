@@ -28,3 +28,8 @@
   margin: 40px 0;
   text-align: center;
 }
+
+.link:hover {
+  color: #ffb703;
+  text-decoration: underline;
+}

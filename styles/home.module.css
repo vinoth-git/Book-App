@@ -26,6 +26,9 @@
 .navLink svg {
   margin-right: 5px;
 }
+.navLink:hover {
+  color: #FFA500;
+}
 .headerImg {
   min-height: 75vh;
   max-height: 90vh;
@@ -108,6 +111,9 @@
 }
 .footer ul li {
   margin: 0 10px;
+}
+.footer a:hover {
+  color: #FFA500;
 }
 .footer p {
   text-align: center;

@@ -42,7 +42,7 @@ export default function Browse(props: Props) {
 
   return (
     <div id="Browse" className={styles.browseRoot}>
-      <h1>Browse books by genres</h1>
+      <h1 style={{ color: "#023047" }}>Browse books by genres</h1>
       <div className={styles.browseTiles}>
         {data.map((c) => (
           <Link key={c.src} href={`/search?query=${c.title}`}>

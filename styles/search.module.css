@@ -46,6 +46,9 @@
   font-family: Barlow-Bold;
   margin: 0 8px 0 0 !important;
 }
+.tileContent p:first-child:hover {
+  text-decoration: underline;
+}
 
 @media only screen and (max-width: 1000px) {
   .tileRoot {

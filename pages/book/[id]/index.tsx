@@ -1,4 +1,4 @@
-import { CardMedia } from "@mui/material";
+import { Button, CardMedia } from "@mui/material";
 import React from "react";
 import styles from "../../../styles/detail.module.css";
 
@@ -13,10 +13,47 @@ function Book(props: Props) {
   return (
     <div className={styles.root}>
       <h1>{(book && book.title) || ""}</h1>
+      <p className={styles.author}>
+        by
+        <span>
+          {book &&
+            book.authors &&
+            book.authors.length > 0 &&
+            ` - ${book.authors.join(" , ")}`}
+        </span>
+      </p>
       <CardMedia
         component={"img"}
         alt="Book Cover"
         src={book && book.imageLinks && book.imageLinks.thumbnail}
+      />
+      <div className={styles.Btns}>
+        {book && book.infoLink && (
+          <Button
+            color="primary"
+            variant="contained"
+            onClick={() => {
+              window.open(book.infoLink);
+            }}
+          >
+            More Info
+          </Button>
+        )}
+        {book && book.previewLink && (
+          <Button
+            color="primary"
+            variant="contained"
+            onClick={() => {
+              window.open(book.previewLink);
+            }}
+          >
+            Preview
+          </Button>
+        )}
+      </div>
+      <p
+        className={styles.description}
+        dangerouslySetInnerHTML={{ __html: (book && book.description) || "" }}
       />
     </div>
   );
